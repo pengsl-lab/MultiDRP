@@ -12,6 +12,7 @@ MATDRP is tested to work under:
 * sklearn 0.23.2
 
 # Quick start
+* Unzip "data.zip"
 * Create a directory "output".  
 * Run python MATDRP.py to reproduce the cross validation results of MATDRP. Options are:  
 -epochs: The Number of epochs to train, default: 15.  
