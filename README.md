@@ -2,7 +2,7 @@
 MATDRP is a Multi-view Attention-based Deep Learning Framework for Anticancer Drug Response Prediction. MATDRP can integrate the internal correlations of features and external relationships of biomedical entities by proposing a multi-view attention-based deep learning framework, thus improving the performance of anticancer drug response prediction.
 
 # Data directory
-There are 3 datasets, i.e.,PRISM, GDSC, and TCGA. For each dataset, We provide drug data (i.e., physicochemical properties and molecular fingerprint), cell line data (i.e., gene expression profiles and copy number variation profiles), and all known drug response data.
+In PRISM dataset, we provide drug data (i.e., physicochemical properties and molecular fingerprint), cell line data (i.e., gene expression profiles and copy number variation profiles), and all known drug response data.
 
 # Requirements
 MATDRP is tested to work under:
