@@ -15,9 +15,9 @@ MATDRP is tested to work under:
 * Create a directory "output".  
 * Run python MATDRP.py to reproduce the cross validation results of MATDRP. Options are:  
 -epochs: The Number of epochs to train, default: 15.  
--batch: Number of batch size, default: 127.  
+-batch: Number of batch size, default: 128.  
 -lr: Learning rate, default: 0.0001.  
 -hidden: Number of hidden units: 64.  
 -nb_heads: Number of head attentions, default: 4.  
--nb_heads: Alpha for the leaky_relu, default: 0.1.  
+-nb_heads: Alpha for the leaky_relu, default: 0.2.  
 -patience: Patience in the early stop mechanism, default: 5.  
