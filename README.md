@@ -1,11 +1,11 @@
-# MATDRP
-MATDRP is a Multi-view Attention-based Deep Learning Framework for Anticancer Drug Response Prediction. MATDRP can integrate the internal correlations of features and external relationships of biomedical entities by proposing a multi-view attention-based deep learning framework, thus improving the performance of anticancer drug response prediction.
+# DeepDRP
+DeepDRP is a multi-view deep neural network for joint learning chemical and biological relationships to improve anticancer drug response prediction. DeepDRP can integrate the internal correlations of features and external relationships of biomedical entities by proposing a multi-view attention-based deep learning framework, thus improving the performance of anticancer drug response prediction.
 
 # Data directory
 In PRISM dataset, we provide drug data (i.e., physicochemical properties and molecular fingerprint), cell line data (i.e., gene expression profiles and copy number variation profiles), and all known drug response data.
 
 # Requirements
-MATDRP is tested to work under:
+DeepDRP is tested to work under:
 * Python 3.6
 * torch 1.5.0
 * numpy 1.19.1
@@ -14,7 +14,7 @@ MATDRP is tested to work under:
 # Quick start
 * Unzip "data.zip" in ./data
 * Create a directory "output".  
-* Run python MATDRP.py to reproduce the cross validation results of MATDRP. Options are:  
+* Run python MATDRP.py to reproduce the cross validation results of DeepDRP. Options are:  
 -epochs: The Number of epochs to train, default: 15.  
 -batch: Number of batch size, default: 128.  
 -lr: Learning rate, default: 0.0001.  
