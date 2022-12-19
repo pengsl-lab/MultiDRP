@@ -14,7 +14,7 @@ DeepDRP is tested to work under:
 # Quick start
 * Unzip "data.zip" in ./data
 * Create a directory "output".  
-* Run python MATDRP.py to reproduce the cross validation results of DeepDRP. Options are:  
+* Run python DeepDRP.py to reproduce the cross validation results of DeepDRP. Options are:  
 -epochs: The Number of epochs to train, default: 15.  
 -batch: Number of batch size, default: 128.  
 -lr: Learning rate, default: 0.0001.  
