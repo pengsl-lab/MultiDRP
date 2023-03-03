@@ -97,7 +97,6 @@ def train(epoch, index_tra, y_tra, index_val, y_val):
     loss_valid = mean_squared_error(true_valid, pred_valid)
     RMSE_valid = np.sqrt(loss_valid)
     MAE_valid = mean_absolute_error(true_valid, pred_valid)
-    MAPE_valid = np.mean(np.abs((np.array(true_valid) - np.array(pred_valid)) / np.array(true_valid))) * 100
     PCC_valid = pearsonr(true_valid, pred_valid)[0]
     R2_valid = r2_score(true_valid, pred_valid)
     
@@ -105,7 +104,6 @@ def train(epoch, index_tra, y_tra, index_val, y_val):
     true_train = y_train.cpu().detach().numpy()
     RMSE_train = np.sqrt(loss_train.item(), out=None)
     MAE_train = mean_absolute_error(true_train, pred_train)
-    MAPE_train = np.mean(np.abs((np.array(true_train) - np.array(pred_train)) / np.array(true_train))) * 100
     R2_train = r2_score(true_train, pred_train)
     PCC_train = pearsonr(true_train, pred_train)[0]
                 
@@ -113,13 +111,11 @@ def train(epoch, index_tra, y_tra, index_val, y_val):
                 'loss_train: {:.4f}'.format(loss_train.item()),
                 'RMSE_train: {:.4f}'.format(RMSE_train),
                 'MAE_train: {:.4f}'.format(MAE_train),
-                'MAPE_train: {:.4f}'.format(MAPE_train),
                 'PCC_train: {:.4f}'.format(PCC_train),
                 'R2_train: {:.4f}'.format(R2_train),
                 '\t loss_valid: {:.4f}'.format(loss_valid),
                 'RMSE_valid: {:.4f}'.format(RMSE_valid),
                 'MAE_valid: {:.4f}'.format(MAE_valid),
-                'MAPE_valid: {:.4f}'.format(MAPE_valid),
                 'PCC_valid: {:.4f}'.format(PCC_valid),
                 'R2_valid: {:.4f}'.format(R2_valid),
                 'time: {:.4f}s'.format(time.time() - t))
@@ -148,18 +144,16 @@ def compute_test(index_test, y_test):
     loss_test = mean_squared_error(true_test, pred_test)
     RMSE_test = np.sqrt(loss_test)
     MAE_test = mean_absolute_error(true_test, pred_test)
-    MAPE_test = np.mean(np.abs((np.array(true_test) - np.array(pred_test)) / np.array(true_test))) * 100
     PCC_test = pearsonr(true_test, pred_test)[0]
     R2_test = r2_score(true_test, pred_test)
 
     with open("MATDRP1", 'a') as f:
-        f.write(str(RMSE_test) + " " + str(MAE_test) + " " +str(MAPE_test) + " " +str(PCC_test) + " " + str(R2_test) + "\n")
+        f.write(str(RMSE_test) + " " + str(MAE_test) + " " +str(PCC_test) + " " + str(R2_test) + "\n")
     
     print("Test set results:",
           "loss= {:.4f}".format(loss_test),
           "RMSE= {:.4f}".format(RMSE_test),
           'MAE= {:.4f}'.format(MAE_test),
-          'MAPE= {:.4f}'.format(MAPE_test),
           "PCC_test= {:.4f}".format(PCC_test),
           "R2_test= {:.4f}\n".format(R2_test))
 
