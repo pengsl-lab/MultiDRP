@@ -1,5 +1,5 @@
 # MultiDRP
-MultiDRP is a multi-view relationship-driven deep attention network for anticancer drug response prediction. MultiDRP can integrate both internal correlation of feature items and external relationship of biomedical entities by using graph attention and self-attention models to improve the anticancer drug response prediction.
+MultiDRP is a hierarchical attention network for anticancer drug response prediction. MultiDRP can integrate both internal correlation of feature items and external relationship of biomedical entities by using graph attention and self-attention models to improve the anticancer drug response prediction.
 
 # Data directory
 In PRISM dataset, we provide drug data (i.e., physicochemical properties and molecular fingerprint), cell line data (i.e., gene expression profiles and copy number variation profiles), and all known drug response data.
