@@ -103,31 +103,7 @@ def sim_graph(omics_data, cell_number):
         topindex = np.argsort(sim_matrix[i])[-10:]
         for j in topindex:
             adj_matrix[i,j] = 1
-    return adj_matrix
-
-def drugs_sim_fingerprints(drug_feature, drug_number):
-    sim_matrix = np.ones((drug_number, drug_number), dtype=float)
-    adj_matrix = np.zeros((drug_number, drug_number), dtype=float)
-    
-    for i in range(drug_number):
-        for j in range(i):
-            sim_matrix[i,j] = Tanimoto(drug_feature[i], drug_feature[j])
-            sim_matrix[j,i] = sim_matrix[i,j]
-
-    for i in range(drug_number):
-        topindex = np.argsort(sim_matrix[i])[-10:]
-        for j in topindex:
-            adj_matrix[i,j] = 1
-    return adj_matrix
-
-
-def Tanimoto(ifea, jfea):
-    inter, union = 0, 0
-    for i in range(ifea.shape[0]):
-        if ifea[i] == 1 and jfea[i] == 1:
-            inter += 1
-    return inter/(np.sum(ifea) + np.sum(jfea) - inter)
-            
+    return adj_matrix   
 
 
 def data_select(cell, lable):
